@@ -1,0 +1,47 @@
+.background-image {
+  height: 100vh;
+  width: 100%;
+  overflow: auto;
+
+  img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1; 
+  }
+}
+
+.form-container {
+  background-color: white;
+  padding: 50px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  opacity: 96%;
+}
+
+.content {
+  position: relative;
+  color: rgb(28, 28, 35);
+  padding: 15px;
+  margin-top: 150px;
+  z-index: 1;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn {
+  background-color: rgb(48, 241, 183);
+  color: white;
+  font-weight: 600;
+}
+
+h1 {
+  color: rgb(28, 28, 35);
+  font-weight: 700;
+  font-size: 32px;
+}

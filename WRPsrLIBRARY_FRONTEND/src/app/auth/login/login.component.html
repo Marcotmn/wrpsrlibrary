@@ -1,0 +1,43 @@
+<div class="background-image">
+  <img src="../assets/img/alex-lvrs-2zDw14yCYqk-unsplash.jpg" alt="sfondo" />
+  <div class="content d-flex flex-column justify-content-center align-items-cener">
+    <div class="text-container text-start">
+      <div class="form-container">
+        <h1>Accedi</h1>
+
+        <form #form="ngForm" (ngSubmit)="accedi()">
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              aria-describedby="email"
+              [(ngModel)]="email"
+              name="email"
+              required
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              aria-describedby="password"
+              [(ngModel)]="password"
+              name="password"
+              required
+            />
+          </div>
+
+          <button type="submit" class="btn btn-primary" [disabled]="form.invalid">
+            Accedi
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

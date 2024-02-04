@@ -1,0 +1,28 @@
+<div class="background-image">
+  <img
+    src="../assets/img/mariia-zakatiura-t7zYZzO_CX0-unsplash.jpg"
+    alt="sfondo"
+  />
+  <div
+    class="content d-flex flex-column justify-content-center align-items-cener"
+  >
+    <div class="text-container text-start">
+      <h1 id="Titolo-pagina">Catalogo WRP</h1>
+      <div class="container-libri">
+        <div class="card mb-5" *ngFor="let libro of tuttiLibri">
+          <a [routerLink]="['/books', libro.idLibro]">
+            <div><h5>Titolo</h5></div>
+            <div>
+              <h1>{{ libro.titolo }}</h1>
+            </div>
+            <div><h5>Editore</h5></div>
+            <div>
+              <h4>{{ libro.editore.editore }}</h4>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

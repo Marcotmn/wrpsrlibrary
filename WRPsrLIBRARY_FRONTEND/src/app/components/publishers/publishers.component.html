@@ -1,0 +1,34 @@
+<div class="background-image">
+  <img src="../assets/img/alex-lvrs-2zDw14yCYqk-unsplash.jpg" alt="sfondo" />
+  <div
+    class="content d-flex flex-column justify-content-center align-items-center"
+  >
+    <div class="text-container text-start">
+      <div class="form-container">
+        <h2>Carica un nuovo editore</h2>
+        <form #editoreForm="ngForm" (ngSubmit)="uploadEditore()">
+          <div class="mb-3">
+            <label for="nomeEditore" class="form-label">Nome Editore</label>
+            <input
+              type="text"
+              class="form-control"
+              id="nomeEditore"
+              aria-describedby="nomeEditore"
+              [(ngModel)]="nuovoEditore.editore"
+              name="nomeEditore"
+              required
+            />
+          </div>
+          <button
+            type="submit"
+            class="btn btn-primary"
+            [disabled]="!editoreForm.valid"
+          >
+            Carica Editore
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

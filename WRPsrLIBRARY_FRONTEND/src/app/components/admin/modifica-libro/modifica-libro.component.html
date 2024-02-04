@@ -1,0 +1,51 @@
+<div class="background-image">
+  <img src="../assets/img/alex-lvrs-2zDw14yCYqk-unsplash.jpg" alt="sfondo" />
+  <div
+    class="content d-flex flex-column justify-content-center align-items-center"
+  >
+    <div class="text-container text-start">
+      <div class="form-container">
+        <h2>Modifica libro</h2>
+        <form #libroForm="ngForm" (ngSubmit)="salvaModifiche()">
+          <div class="mb-3">
+            <label for="titolo" class="form-label">Titolo</label>
+            <input
+              type="text"
+              class="form-control"
+              id="titolo"
+              aria-describedby="titolo"
+              [(ngModel)]="libroModel.titolo"
+              name="titolo"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="editore" class="form-label">Editore</label>
+            <select
+              id="editore"
+              class="form-control"
+              aria-describedby="editore"
+              [(ngModel)]="libroModel.editore"
+              name="editore"
+              required
+            >
+              <option *ngFor="let editore of editori" [value]="editore.editore">
+                {{ editore.editore }}
+              </option>
+            </select>
+          </div>
+          <button
+            type="submit"
+            class="btn btn-primary"
+            [disabled]="
+              !libroForm.valid || !libroModel.titolo || !libroModel.editore
+            "
+          >
+            Modifica libro
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>
